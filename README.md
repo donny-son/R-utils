@@ -1,19 +1,26 @@
 # Capture R package versions
 
-## One-liner
-
 `R` package version extractor that works like `pip freeze`.
 
 ## Install
 
-
 ```{bash}
-```
+# download file
+curl -O https://raw.githubusercontent.com/donny-son/R-utils/main/r-freeze.sh 
 
+# give executable permission
+chmod +x r-freeze.sh 
+
+# install to /usr/local/bin
+sudo mv r-freeze.sh /usr/local/bin/r-freeze 
+
+# restart shell
+$SHELL 
+```
 
 ## Usage
 
-Create `r-package-version.txt` in home directory by going through the default `.libPaths()`.
+Create `r-package-version.txt` in home directory by going through the default `.libPaths()` with the following command.
 
 ```{bash}
 r-freeze
