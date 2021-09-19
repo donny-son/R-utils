@@ -48,7 +48,7 @@ if [[ -e $Rlibdir ]] ; then
 elif [[ "$Rlibdir" == '' ]] ; then
     # default case
     # Get current R library path
-    echo "cat(.libPaths())" > tmp.R
+    echo "cat(.libPaths()[1])" > tmp.R
     Rlibdir=$(Rscript tmp.R)
     rm tmp.R
 
